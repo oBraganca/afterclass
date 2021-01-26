@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#ddd;
+    font-family: 'Roboto', sans-serif;
+}
+.container-cent{
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    border: 1px solid #fff;
+    border-radius: 10px 0px;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.animation{
+    animation-name: animacao;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    font-size: 40px;
+}
+
+@keyframes animacao {
+    0%{ color: #fec0ca; }
+     25%{ color: #fe60a3; }
+     50%{ color: #fec0ca; }
+     75%{ color:#fe60a3; }
+     100%{ color:  #fec0ca;}
+}
+.div-media{
+    margin-top: 250px;
+    position: absolute;
+    z-index: 23;
+}
+.cent{
+    text-align: center;
+}
+.div-media a {
+    padding: 10px;
+}
+.social-media{
+    font-size: 25px;
+    list-style: none;
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    padding:10px 15px;
+    margin-top: 30px;
+    background-color:rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 50px rgb(218 32 55);
+    animation: ant-anim-social-media 5s ease-out infinite;
+    transition-duration: 0.5s;
+}
+.social-media:hover{
+    background-color:rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 50px rgb(225 225 225);
+    color:#ddd;
+}
+@media screen and (min-width:769px){
+    
+    .container{
+        background-image: url(../img/fund.jpg);
+        background-repeat: no-repeat;
+        background-size:100vw 100vh;
+        color: #ddd;
+        position: relative;
+        z-index: -33;
+    }
+    
+    .container-cent-opc{
+        opacity: 30%;
+    }
+
+    div h2{
+        text-align:center;
+        margin-top: 60px;
+    }
+    .header{
+        position: relative;
+        height: 6vh;
+        width:18vw;
+        background-color: #292929;
+        display: flex;
+        flex-direction: row-reverse;
+        /* justify-content: end; */
+        align-items: center;
+        text-align: end;
+        border-bottom: 1px solid grey;
+        left:-14.5%;
+        transition: 1s;
+    }
+    .icon-menu{
+        color:white;
+        margin-right: 1rem;
+    }
+
+    .menu{
+        position: absolute;
+        width: 18vw;
+        font-size:14px;
+        height: 94vh;
+        color: #fff;
+        background-color: #292929;
+        left:-14.5%;
+        transition: 1s;
+    }
+
+    .profile{
+        display:flex;
+        align-items: center;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    .profile-image{
+        display: block;
+        width: 55px;
+        padding-right: 1rem;
+    }
+
+    .profile-image img{
+        border-radius: 50%;
+        max-width: 100%;
+    }
+    .status{
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+    }
+    .status::before{
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-radius: 50%;
+        background-color: gray;
+        margin-right: 5px;
+    }
+    .status-2{
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+    }
+    .status-2::before{
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-radius: 50%;
+        background-color: green;
+        margin-right: 5px;
+    }
+    .link-nav{
+        color:#fff;
+        text-decoration: none;
+        padding: 1rem;
+        display: list-item;
+    }
+    .icon{
+        width:1.5rem;
+    }
+    .list-nav{
+        padding-top: 1rem;
+    }
+    .menu__move{
+        left: 0;
+        transition: 1s;
+    }
+
+/* Formulario de login */
+    .form{
+        font-family: 'Roboto', sans-serif;
+        width: 60vw;
+        height: 65vh;
+        background-color: #3a2850;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 50px;
+        transition: 0.5s;
+    }
+    .form input{
+        display: block;
+        padding:5px 50px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        text-align: center;
+
+    }
+    .form input:focus{
+        outline: thin dotted;
+        outline: 0px auto;
+        outline-offset: 0px;
+    }
+    .accout{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .accout-2{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-move1{
+        position: absolute;
+        margin-left: -6%;
+        top: 50%;
+        transition: 0.5s;
+    }
+    .form-move2{
+        margin-left: -6vw;
+        z-index: -3;
+        left: 30%;
+        transition: 0.5s;
+        position: absolute;
+    }
+    
+    .btn-sub{
+        border-radius: 15px;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding:5px 30px;
+        margin-top: 10px;
+        cursor: pointer;
+        border: 1px solid #000;
+        display: block;
+    }
+    .btn-sub:focus{
+        outline: thin dotted;
+        outline: 0px auto;
+        outline-offset: 0px;
+    }
+    .button-polymorph{
+        width: 13vw;
+        height: 65vh;
+        margin-left:78.3%;
+        border-radius: 0 25px 25px 0;
+        background-color: #492955;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    /* troca */
+    
+    
+    .polymorph{
+        display:block;
+        position: static;
+    }
+    .button-oa{
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        position: absolute;
+        transition: 0.5s;
+    }
+    .small{
+        margin-top: 5px;
+        z-index: -3;
+    }
+    .big{
+        z-index: 3;
+    }
+    .big-tp{
+        top:100px;
+        transition: 0.5s;    
+    }
+    .small-left{
+        left: 42%;
+        transition: 0.8s;
+    }
+    /* fim troca */
+/*Fim Formulario de login */
+
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .container{
+        background-image: url(../img/fund-resp.png);
+        background-repeat: no-repeat;
+        background-size:100vw 100vh;
+        color: #ddd;
+        position: relative;
+        z-index: -23;
+    }
+    .container-cent-opc{
+        opacity: 30%;
+    }
+
+    div h2{
+        text-align:center;
+        margin-top: 60px;
+    }
+    .header{
+        position: relative;
+        height: 5vh;
+        width:100vw;
+        background-color: #292929;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: flex-end;
+        text-align: end;
+        border-bottom: 1px solid grey;
+    }
+    .icon-menu{
+        color:white;
+        margin-right: 1rem;
+    }
+
+    .menu{
+        position: absolute;
+        width: 50vw;
+        height: 95vh;
+        font-size:14px;
+        color: #fff;
+        background-color: #292929;
+        left: -67%;
+        z-index:333;
+        transition: 1s;
+    }
+
+    .profile{
+        display:flex;
+        align-items: center;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    .profile-image{
+        display: block;
+        width: 55px;
+        padding-right: 1rem;
+    }
+
+    .profile-image img{
+        border-radius: 50%;
+        max-width: 100%;
+    }
+    .status{
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+    }
+    .status::before{
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-radius: 50%;
+        background-color: gray;
+        margin-right: 5px;
+    }
+    .link-nav{
+        color:#fff;
+        text-decoration: none;
+        padding: 1rem;
+        display: list-item;
+    }
+    .icon{
+        width:1.5rem;
+    }
+    .list-nav{
+        padding-top: 1rem;
+    }
+
+    .menu__move{
+        left: 0;
+        transition: 1s;
+    }
+}
